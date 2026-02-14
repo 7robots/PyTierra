@@ -1,0 +1,36 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+*.egg
+dist/
+build/
+*.whl
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# PyTierra session files
+*.pytierra
+
+# Genebank output
+gb0/
+
+# Profiling
+*.prof
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/

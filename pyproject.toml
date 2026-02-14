@@ -1,0 +1,54 @@
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pytierra"
+version = "1.0.0"
+description = "Python reimplementation of Tom Ray's Tierra 6.02 artificial life simulator"
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.10"
+authors = [
+    { name = "Jefferson Burson" },
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Science/Research",
+    "Intended Audience :: Education",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Scientific/Engineering :: Artificial Life",
+    "Topic :: Scientific/Engineering :: Bio-Informatics",
+]
+dependencies = [
+    "numpy>=1.24",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+]
+gui = [
+    "PySide6>=6.5",
+    "pyqtgraph>=0.13",
+]
+
+[project.urls]
+Homepage = "https://github.com/7robots/PyTierra"
+Documentation = "https://github.com/7robots/PyTierra/tree/main/docs"
+Repository = "https://github.com/7robots/PyTierra"
+"Original Tierra" = "http://life.ou.edu/tierra/"
+
+[project.scripts]
+pytierra = "pytierra.cli:main"
+pytierra-gui = "pytierra.gui.app:run_gui"
+
+[tool.setuptools.packages.find]
+include = ["pytierra*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
