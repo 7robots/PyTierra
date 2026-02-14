@@ -58,7 +58,7 @@ A dialog will prompt you to configure soup size and ancestor genome. Click OK to
 
 ```bash
 # Run 10 million instructions with the default ancestor
-pytierra run --ancestor Tierra6_02/tierra/gb0/0080aaa.tie -n 10M
+pytierra run --ancestor data/genomes/0080aaa.tie -n 10M
 
 # Profile performance
 pytierra profile -n 1M

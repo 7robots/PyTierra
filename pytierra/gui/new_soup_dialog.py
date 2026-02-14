@@ -10,14 +10,8 @@ from PySide6.QtWidgets import (
     QSpinBox, QVBoxLayout,
 )
 
-import pytierra
 from pytierra.config import Config
-
-
-# Built-in ancestor path relative to the package
-_BUILTIN_ANCESTOR = (
-    Path(pytierra.__file__).parent.parent / "Tierra6_02" / "tierra" / "gb0" / "0080aaa.tie"
-)
+from pytierra.paths import default_ancestor_path
 
 
 class NewSoupDialog(QDialog):
@@ -138,5 +132,6 @@ class NewSoupDialog(QDialog):
     def get_ancestor_path(self) -> str:
         """Return the path to the ancestor genome file."""
         if self._ancestor_builtin.isChecked():
-            return str(_BUILTIN_ANCESTOR)
+            path = default_ancestor_path()
+            return str(path) if path else ""
         return self._custom_ancestor_path

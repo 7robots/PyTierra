@@ -42,7 +42,7 @@ pip install -e .
 ### CLI
 
 ```bash
-pytierra run --ancestor Tierra6_02/tierra/gb0/0080aaa.tie -n 10M
+pytierra run --ancestor data/genomes/0080aaa.tie -n 10M
 ```
 
 This runs 10 million instructions and prints periodic status reports.

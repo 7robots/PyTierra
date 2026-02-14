@@ -24,7 +24,7 @@ env/
 # PyTierra session files
 *.pytierra
 
-# Genebank output
+# Genebank runtime output (not the bundled data/genomes/)
 gb0/
 
 # Profiling

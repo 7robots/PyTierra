@@ -46,7 +46,7 @@ class TestDataCollector:
         from pytierra.simulation import Simulation
 
         ancestor = os.path.join(
-            os.path.dirname(__file__), "..", "Tierra6_02", "tierra", "gb0", "0080aaa.tie"
+            os.path.dirname(__file__), "..", "data", "genomes", "0080aaa.tie"
         )
         config = Config()
         config.soup_size = 10000

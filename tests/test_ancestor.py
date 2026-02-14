@@ -8,7 +8,7 @@ from pytierra.genome_io import load_genome
 
 
 ANCESTOR_PATH = os.path.join(
-    os.path.dirname(__file__), "..", "Tierra6_02", "tierra", "gb0", "0080aaa.tie"
+    os.path.dirname(__file__), "..", "data", "genomes", "0080aaa.tie"
 )
 
 

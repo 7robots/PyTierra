@@ -2,3 +2,5 @@ include README.md
 include LICENSE
 recursive-include docs *.md
 recursive-include pytierra *.py
+recursive-include data *
+recursive-include pytierra/data *.tie

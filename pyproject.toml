@@ -50,5 +50,8 @@ pytierra-gui = "pytierra.gui.app:run_gui"
 [tool.setuptools.packages.find]
 include = ["pytierra*"]
 
+[tool.setuptools.package-data]
+"pytierra.data" = ["*.tie"]
+
 [tool.pytest.ini_options]
 testpaths = ["tests"]

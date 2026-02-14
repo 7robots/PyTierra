@@ -7,7 +7,7 @@ from pytierra.simulation import Simulation
 
 
 ANCESTOR_PATH = os.path.join(
-    os.path.dirname(__file__), "..", "Tierra6_02", "tierra", "gb0", "0080aaa.tie"
+    os.path.dirname(__file__), "..", "data", "genomes", "0080aaa.tie"
 )
 
 
@@ -28,7 +28,7 @@ class TestSimulation:
 
     def test_config_loading(self):
         config_path = os.path.join(
-            os.path.dirname(__file__), "..", "Tierra6_02", "tierra", "si0"
+            os.path.dirname(__file__), "..", "data", "config", "si0"
         )
         if os.path.exists(config_path):
             config = Config.load(config_path)

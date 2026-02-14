@@ -8,7 +8,7 @@ from pytierra.simulation import Simulation
 from pytierra.controller import SimulationController, CellSnapshot
 
 ANCESTOR_PATH = os.path.join(
-    os.path.dirname(__file__), "..", "Tierra6_02", "tierra", "gb0", "0080aaa.tie"
+    os.path.dirname(__file__), "..", "data", "genomes", "0080aaa.tie"
 )
 
 

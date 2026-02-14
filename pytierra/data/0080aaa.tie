@@ -1,0 +1,89 @@
+
+format: 3  bits: 0
+genotype: 0080aaa  parent genotype: ---
+1st_daughter: inst: 827
+
+CODE
+
+track 0:
+
+nop1    ;   0
+nop1    ;   1
+nop1    ;   2
+nop1    ;   3
+zero    ;   4
+not0    ;   5
+shl     ;   6
+shl     ;   7
+movDC   ;   8
+adrb    ;   9
+nop0    ;  10
+nop0    ;  11
+nop0    ;  12
+nop0    ;  13
+subAAC  ;  14
+movBA   ;  15
+adrf    ;  16
+nop0    ;  17
+nop0    ;  18
+nop0    ;  19
+nop1    ;  20
+incA    ;  21
+subCAB  ;  22
+nop1    ;  23
+nop1    ;  24
+nop0    ;  25
+nop1    ;  26
+mal     ;  27
+call    ;  28
+nop0    ;  29
+nop0    ;  30
+nop1    ;  31
+nop1    ;  32
+divide  ;  33
+jmpo    ;  34
+nop0    ;  35
+nop0    ;  36
+nop1    ;  37
+nop0    ;  38
+ifz     ;  39
+nop1    ;  40
+nop1    ;  41
+nop0    ;  42
+nop0    ;  43
+pushA   ;  44
+pushB   ;  45
+pushC   ;  46
+nop1    ;  47
+nop0    ;  48
+nop1    ;  49
+nop0    ;  50
+movii   ;  51
+decC    ;  52
+ifz     ;  53
+jmpo    ;  54
+nop0    ;  55
+nop1    ;  56
+nop0    ;  57
+nop0    ;  58
+incA    ;  59
+incB    ;  60
+jmpo    ;  61
+nop0    ;  62
+nop1    ;  63
+nop0    ;  64
+nop1    ;  65
+ifz     ;  66
+nop1    ;  67
+nop0    ;  68
+nop1    ;  69
+nop1    ;  70
+popC    ;  71
+popB    ;  72
+popA    ;  73
+ret     ;  74
+nop1    ;  75
+nop1    ;  76
+nop1    ;  77
+nop0    ;  78
+ifz     ;  79

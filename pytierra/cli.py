@@ -100,6 +100,13 @@ def run_simulation(args) -> int:
         sim.boot_from_config(genebank_dir)
 
     if sim.scheduler.num_cells == 0:
+        # Try built-in ancestor as last resort
+        from .paths import default_ancestor_path
+        ancestor = default_ancestor_path()
+        if ancestor:
+            sim.boot(str(ancestor))
+
+    if sim.scheduler.num_cells == 0:
         print("Error: No cells in simulation. Provide --ancestor or --config with inoculations.", file=sys.stderr)
         return 1
 
@@ -167,17 +174,12 @@ def run_profile(args) -> int:
         sim.boot(args.ancestor)
     else:
         # Use built-in ancestor
-        from importlib.resources import files
-        ancestor_path = str(files("pytierra").joinpath("data", "0080aaa.tie"))
-        if not Path(ancestor_path).exists():
-            # Fallback: try Tierra6_02 directory
-            fallback = Path(__file__).parent.parent / "Tierra6_02" / "tierra" / "gb0" / "0080aaa.tie"
-            if fallback.exists():
-                ancestor_path = str(fallback)
-            else:
-                print("Error: No ancestor genome found. Provide --ancestor.", file=sys.stderr)
-                return 1
-        sim.boot(ancestor_path)
+        from .paths import default_ancestor_path
+        resolved = default_ancestor_path()
+        if resolved is None:
+            print("Error: No ancestor genome found. Provide --ancestor.", file=sys.stderr)
+            return 1
+        sim.boot(str(resolved))
 
     if sim.scheduler.num_cells == 0:
         print("Error: No cells booted.", file=sys.stderr)

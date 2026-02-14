@@ -1,4 +1,0 @@
-rm gb2/*.tmp
-rm gb2/core_out
-rm gb2/soup_out
-rm gb2/tierra.log
